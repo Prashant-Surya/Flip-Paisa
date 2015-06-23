@@ -152,6 +152,7 @@ public class Test extends ActionBarActivity {
         }
         protected void onPreExecute(){
             passText = (EditText) findViewById(R.id.upPass);flag =0;
+            userDetails.mail = mail;
         }
         @Override
         protected String doInBackground(String... params) {
@@ -323,7 +324,7 @@ public class Test extends ActionBarActivity {
                 flag=0;
             }
             if((restSuc.equalsIgnoreCase("1") && method.equalsIgnoreCase("Sign In")) || signed == 1){
-                userDetails.mail=mail;
+                userDetails.mail=this.mail;
                 SharedPreferences.Editor edit = pref.edit();
                 edit.putString("mail",mail);
                 edit.commit();

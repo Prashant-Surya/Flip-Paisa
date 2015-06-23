@@ -1,5 +1,6 @@
 package com.prashant.android.flipv2;
 
+import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -37,7 +38,8 @@ public class FlipVoucher extends ActionBarActivity {
             @Override
             public void onClick(View v) {
                 amount = amo.getText().toString();
-                mail = userDetails.mail;
+                SharedPreferences prefs = getSharedPreferences("MyApp",MODE_PRIVATE);
+                mail = prefs.getString("mail","no");
                 tp.execute(mail,amount);
             }
         });

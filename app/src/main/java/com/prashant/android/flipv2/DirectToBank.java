@@ -1,5 +1,6 @@
 package com.prashant.android.flipv2;
 
+import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -38,7 +39,8 @@ public class DirectToBank extends ActionBarActivity {
         tamount = (EditText) findViewById(R.id.Amount);
         tnumber = (EditText) findViewById(R.id.phone);
         btn = (Button) findViewById(R.id.bankSubmit);
-        mail = userDetails.mail;
+        SharedPreferences prefs = getSharedPreferences("MyApp",MODE_PRIVATE);
+        mail = prefs.getString("mail","no");
         tbp = new toBankPage();
         btn.setOnClickListener(new View.OnClickListener() {
             @Override

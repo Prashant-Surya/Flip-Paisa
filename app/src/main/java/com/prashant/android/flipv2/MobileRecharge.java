@@ -1,5 +1,6 @@
 package com.prashant.android.flipv2;
 
+import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -53,7 +54,8 @@ public class MobileRecharge extends ActionBarActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mail = userDetails.mail;
+                SharedPreferences prefs = getSharedPreferences("MyApp",MODE_PRIVATE);
+                mail = prefs.getString("mail","no");
                 number = num.getText().toString();
                 operator = op.getText().toString();
                 amount = amo.getText().toString();
