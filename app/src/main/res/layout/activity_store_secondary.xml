@@ -1,0 +1,104 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:background="#FFFFFF"
+    tools:context="com.prashant.android.flipv2.Store_secondary"
+    android:id="@+id/sec">
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/storeLarge"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/storeLarge"
+        android:id="@+id/gotostore"
+        android:text="Go to Store"
+        android:onClick="gotostore"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Cashback Rates"
+        android:id="@+id/cashHead"
+        android:layout_below="@+id/gotostore"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginBottom="10dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@id/cashHead"
+        android:text="Mobile App"
+        android:layout_marginLeft="20dp"
+        android:id="@+id/mob"
+        android:visibility="gone"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Website"
+        android:id="@+id/web"
+        android:layout_alignTop="@+id/mob"
+        android:layout_toRightOf="@+id/cashHead"
+        android:layout_toEndOf="@+id/cashHead"
+        android:visibility="gone"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="    Old   New           Old   New       Category"
+        android:layout_marginTop="5dp"
+        android:id="@+id/mold"
+        android:layout_below="@+id/web"
+        android:layout_marginLeft="5dp"
+        android:layout_alignStart="@+id/mob"
+        android:visibility="gone"/>
+
+    <!--<TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="10%   20%         30%   40%      Clothing"
+        android:id="@+id/tempRow"
+        android:layout_below="@+id/mold"
+        android:layout_marginLeft="5dp"
+        android:layout_alignStart="@+id/mob"
+        android:layout_marginTop="15dp"
+        android:visibility="gone"/>-->
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/mold"
+        android:layout_marginTop="5dp"
+        android:id="@+id/flipList"
+        android:visibility="gone">
+    </ListView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView2"
+        android:layout_below="@+id/cashHead"
+        android:layout_alignLeft="@+id/cashHead"
+        android:layout_alignStart="@+id/cashHead"
+        android:text="Cash Back       Category" />
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/others"
+        android:layout_below="@id/textView2">
+
+        </ListView>
+
+
+</RelativeLayout>

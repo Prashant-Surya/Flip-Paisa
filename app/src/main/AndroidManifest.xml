@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.prashant.android.flipv2" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".Test"
+            android:label="@string/title_activity_test" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!--
+            <activity
+            android:name=".Test"
+            android:label="@string/title_activity_test" >
+        -->
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".Store_secondary"
+            android:label="@string/title_activity_store_secondary" >
+        </activity>
+        <activity
+            android:name=".DirectToBank"
+            android:label="@string/title_activity_direct_to_bank" >
+        </activity>
+        <activity
+            android:name=".MobileRecharge"
+            android:label="@string/title_activity_mobile_recharge" >
+        </activity>
+        <activity
+            android:name=".FlipVoucher"
+            android:label="@string/title_activity_flip_voucher" >
+        </activity>
+        <activity
+            android:name=".WithDraw"
+            android:label="@string/title_activity_with_draw" >
+        </activity>
+    </application>
+
+</manifest>
